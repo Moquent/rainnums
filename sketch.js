@@ -21,7 +21,7 @@ function setup() {
 function draw() {
   background("black"); 
   
-  Rain.display();
+  rain.display();
 
   drawSprites();
 }

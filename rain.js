@@ -1,19 +1,19 @@
 class Rain{
     constructor(x, y){
-        'restitution':0.8,
-        'friction':1.0,
-        'density':1.0,
-        'isStatic': false
+    var options = {
+        restitution: 0.8, 
+        friction: 1.0,
+        density: 1.0,
+        isStatic: false
     }
-
-    this.body = Bodies.rectangle(x, y, 5, 5, options);
+    this.body = Bodies.rectangle(random(10, 790), 0, 5, 5, options);
     this.width = 5;
     this.height = 5;
     World.add(world, this.body);
 }
 
 display(){
-    for (var i = random(0, 9), i < 10, i = random(0, 9))
+    for(var i = random(0, 9); i < 10; i = random(0, 9))
     {
         var a = random(0, 9);
         if(a == 1){
@@ -56,7 +56,8 @@ display(){
             this.image = loadImage("nums/0.png");
         }
         
-        image = (this.image, random(10, 790), 0)
+        image = (this.image, random(10, 790), 0, this.width, this.height);
 
     }
+}
 }

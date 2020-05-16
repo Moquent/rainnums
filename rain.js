@@ -9,13 +9,14 @@ class Rain{
     this.body = Bodies.rectangle(random(10, 790), 0, 5, 5, options);
     this.width = 5;
     this.height = 5;
+    this.image = loadImage("nums/0.png");
     World.add(world, this.body);
 }
 
 display(){
-    for(var i = random(0, 9); i < 10; i = random(0, 9))
-    {
-        var a = random(0, 9);
+    var a = Math.round(random(0, 9));
+    
+        
         if(a == 1){
             this.image = loadImage("nums/1.png");
         }
@@ -23,7 +24,6 @@ display(){
         if(a == 2){
             this.image = loadImage("nums/2.png");
         }
-
         if(a == 3){
             this.image = loadImage("nums/3.png");
         }
@@ -36,28 +36,11 @@ display(){
             this.image = loadImage("nums/5.png");
         }
 
-        if(a == 6){
-            this.image = loadImage("nums/6.png");
-        }
-
-        if(a == 7){
-            this.image = loadImage("nums/7.png");
-        }
-
-        if(a == 8){
-            this.image = loadImage("nums/8.png");
-        }
-
-        if(a == 9){
-            this.image = loadImage("nums/9.png");
-        }
-
-        if(a == 0){
-            this.image = loadImage("nums/0.png");
-        }
         
-        image = (this.image, random(10, 790), 0, this.width, this.height);
+    
+        image(this.image, this.body.position.x, this.body.position.y, this.width, this.height);
 
-    }
+        
+    
 }
 }
